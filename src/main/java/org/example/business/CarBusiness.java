@@ -18,21 +18,25 @@ public class CarBusiness implements Serializable {
 	@Inject
 	private CarRepository carRepository;
 	
+	//Insert
 	@Transactional
 	public Long insert(Car car) throws Exception{
 		return carRepository.insert(car);
 	}
 	
+	//Update
 	@Transactional
 	public Long update(Car car) throws Exception{
 		return carRepository.update(car);
 	}
 	
+	//Delete
 	@Transactional
 	public void delete(Car car) throws Exception{
 		carRepository.delete(car);
 	}
 
+	//List
 	@Transactional
 	public List<Car> getAll() throws Exception{
 		return carRepository.findAll();

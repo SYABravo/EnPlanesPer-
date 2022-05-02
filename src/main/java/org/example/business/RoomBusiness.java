@@ -18,21 +18,25 @@ public class RoomBusiness implements Serializable {
 	@Inject
 	private RoomRepository roomRepository;
 	
+	//Insert
 	@Transactional
 	public Long insert(Room room) throws Exception{
 		return roomRepository.insert(room);
 	}
 	
+	//Update
 	@Transactional
 	public Long update(Room room) throws Exception{
 		return roomRepository.update(room);
 	}
 	
+	//Delete
 	@Transactional
 	public void delete(Room room) throws Exception{
 		roomRepository.delete(room);
 	}
 
+	//List
 	@Transactional
 	public List<Room> getAll() throws Exception{
 		return roomRepository.findAll();

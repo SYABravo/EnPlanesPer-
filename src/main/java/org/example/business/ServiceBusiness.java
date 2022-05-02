@@ -30,16 +30,19 @@ public class ServiceBusiness implements Serializable {
 	@Inject
 	private RoomRepository roomRepository;
 
+	//Insert
 	@Transactional
 	public Long insert(Service service) throws Exception {
 		return serviceRepository.insert(service);
 	}
 
+	//Update
 	@Transactional
 	public Long update(Service service) throws Exception {
 		return serviceRepository.update(service);
 	}
 
+	//Delete
 	@Transactional
 	public void delete(Service service) throws Exception{
 		//implementaciónCascada
@@ -65,6 +68,7 @@ public class ServiceBusiness implements Serializable {
 		serviceRepository.delete(service);
 	}
 
+	//List
 	@Transactional
 	public List<Service> getAll() throws Exception {
 		return serviceRepository.findAll();

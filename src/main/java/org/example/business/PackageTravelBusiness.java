@@ -24,21 +24,25 @@ public class PackageTravelBusiness implements Serializable {
 	@Inject
 	private PackageTravelRepository packageTravelRepository;
 
+	//Insert
 	@Transactional
 	public Long insert(PackageTravel packageTravel) throws Exception {
 		return packageTravelRepository.insert(packageTravel);
 	}
 
+	//Update
 	@Transactional
 	public Long update(PackageTravel packageTravel) throws Exception {
 		return packageTravelRepository.update(packageTravel);
 	}
 
+	//Delete
 	@Transactional
 	public void delete(PackageTravel packageTravel) throws Exception {
 		packageTravelRepository.delete(packageTravel);
 	}
 
+	//List
 	@Transactional
 	public List<PackageTravel> getAll() throws Exception {
 		return packageTravelRepository.findAll();

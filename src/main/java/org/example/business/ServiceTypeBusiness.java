@@ -18,6 +18,7 @@ public class ServiceTypeBusiness implements Serializable {
 	@Inject
 	private ServiceTypeRepository serviceTypeRepository;
 	
+	//List type services
 	@Transactional
 	public List<ServiceType> getAll() throws Exception {
 		return serviceTypeRepository.findall();

@@ -18,21 +18,25 @@ public class PlateBusiness implements Serializable {
 	@Inject
 	private PlateRepository plateRepository;
 
+	//insert
 	@Transactional
 	public Long insert(Plate plate) throws Exception{
 		return plateRepository.insert(plate);
 	}
 	
+	//Update
 	@Transactional
 	public Long update(Plate plate) throws Exception{
 		return plateRepository.update(plate);
 	}
 	
+	//Delete
 	@Transactional
 	public void delete(Plate plate) throws Exception{
 		plateRepository.delete(plate);
 	}
 
+	//List
 	@Transactional
 	public List<Plate> getAll() throws Exception{
 		return plateRepository.findAll();

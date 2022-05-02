@@ -23,6 +23,7 @@ public class ProvinceBusiness implements Serializable {
 	@Inject
 	private ProvinceRepository provinceRepository;
 
+	//List province
 	@Transactional
 	public List<Province> getAllProvince() throws Exception {
 		return provinceRepository.findall();

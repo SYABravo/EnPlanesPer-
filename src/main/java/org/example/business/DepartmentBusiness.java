@@ -18,6 +18,7 @@ public class DepartmentBusiness implements Serializable {
 	@Inject
 	private DepartmentRepository departmentRepository;
 	
+	//List department
 	@Transactional
 	public List<Department> getAllDepartment() throws Exception {
 		return departmentRepository.findall();
